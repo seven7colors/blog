@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>童老师ThinkPHP交流群：484519446</title>
+        <meta name="keywords" content="童老师ThinkPHP交流群：484519446" />
+        <meta name="description" content="童老师ThinkPHP交流群：484519446" />
+        <meta name="mobile-agent" content="format=html5; url=http://m.zx.wed114.cn/shenghuo/20160920156214.html" />
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+		<link href="__PUBLIC__/style/lady.css" type="text/css" rel="stylesheet" />
+		<script type='text/javascript' src='__PUBLIC__/style/ismobile.js'></script>
+    </head>
+
+    <body>
+
+        {include file="common/header"}
+
+        <div class="hotmenu">
+            <div class="con">热门标签：<a href='/jiehun/qiwenqushi/'>奇闻趣事</a> <a href='/jiehun/shenghuomiaozhao/'>生活妙招</a> <a href='/jiehun/xingzuo/'>星座</a> <a href='/jiehun/qinzi/'>亲子</a> <a href='/jiehun/qiche/'>汽车</a> <a href='/jiehun/chongwubaike/'>宠物百科</a> <a href='/jiehun/jiaji/'>家居</a> </div>
+        </div>
+
+        <!--顶部通栏-->
+        <script src='/jiehun/goto/my-65547.js' language='javascript'></script>
+
+        <div class="position"><a href="{:url('index/index')}">主页</a> > <a href="{:url('article/index',array('cateid'=>$cate['id']))}">{$cate['catename']}</a> >  </div>
+
+        <div class="overall">
+            <div class="left">
+                <div class="scrap">
+                    <h1>{$article.title}</h1>
+                    <div class="spread">
+                        <span class="writor">发布时间：{$article.time|date="Y-m-d",###}</span>
+                        <span class="writor">编辑：{$article.author}</span>
+                        <span class="writor">标签：{$article.keywords}</span>
+                        <span class="writor">热度：{$article.click}</span>
+                    </div>
+                </div>
+
+                <!--百度分享-->
+                <script src='__PUBLIC__/jiehun/goto/my-65542.js' language='javascript'></script>
+
+                <div class="takeaway">
+                    <span class="btn arr-left"></span>
+                    <p class="jjxq">{$article.desc}</p>
+
+                    <span class="btn arr-right"></span>
+                </div>
+
+                  <script src='__PUBLIC__/jiehun/goto/my-65541.js' language='javascript'></script>
+
+                <div class="substance">{$article.content}</div>
+                <div class="biaoqian">
+                   
+                </div>
+
+
+
+                <!--相关阅读 -->
+                <div class="xgread">
+                    <div class="til"><h4>相关阅读</h4></div>
+                    <div class="lef"><!--相关阅读主题链接--><script src='/jiehun/goto/my-65540.js' language='javascript'></script></div>
+                    <div class="rig">
+                        <ul>
+                     {volist name="relates" id="vo"}       
+<li><a href="{:url('article/index',array('Arid'=>$vo[0]))}" >{$vo.1}</a></li>
+                     {/volist}
+                        </ul>
+                    </div>
+                </div>
+
+                <!--频道推荐-->
+                <div class="hotsnew">
+                    <div class="til"><h4>频道推荐</h4></div>
+                    <ul>
+                        {volist name="tuijian" id="vo"}  
+                        <li><div class="tu"><a href="{:url('article/index',array('Arid'=>$vo['id']))}" ><img src="{if condition="$vo['pic'] neq ''"}__IMG__{$vo.pic}
+                            {else /}__PUBLIC__/images/error.png
+                            {/if}" /></a></div><p><a href="{:url('article/index',array('Arid'=>$vo['id']))}">{$vo.title}</a></p></li>
+                        {/volist}
+                    </ul>
+                </div>		
+            </div>
+
+            {include file="common/right"}
+    
+</div>
+
+        <div class="footerd">
+            <ul>
+                <li>Copyright &#169; 2008-2015  all rights reserved 版权所有</li> 
+            </ul>
+        </div>
+
+        <div style="display:none;"><script src='/jiehun/goto/my-65537.js' language='javascript'></script><script src="/jiehun/images/js/count_zixun.js" language="JavaScript"></script></div>
+
+    </body>
+</html>
